@@ -75,6 +75,25 @@
              *     Answer: No, an extension method cannot access private members of the class it extends. It can only access public and protected members of the class.
              */
             #endregion
+
+            #region Partial Classes and Partial Methods
+            /*
+             *  a) What is a Partial Class?
+             *     Answer: A partial class is a class that can be split into multiple files. All parts are combined by the compiler into a single class.
+             *     
+             *  b) Why would a developer split one class into multiple files?
+             *     Answer: 1. To organize large classes into multible files for better readability and maintainability.
+             *             2. To allow different team members to extend  a class without modifying the original file, that can help to avoid conflicts.
+             *             3. To separate auto-generated code from manually written code, making it easier to manage and update.
+             *         
+             *   c) What is a Partial Method?
+             *      Answer: A partial method is a method that can be defined in one part of a partial class and implemented in another part.
+             *      
+             *   d) What happens if a declared partial method has no implementation?
+             *     Answer: If a declared partial method has no implementation, the compiler will remove the method and it will not be included in the final compiled code.
+             *             
+             */
+            #endregion
             #endregion
 
             #region Practical Questions
