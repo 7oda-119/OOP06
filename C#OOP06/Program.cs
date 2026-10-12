@@ -40,6 +40,25 @@
              *             On the other hand, if you use a shallow copy, any changes made to the reference-type members in the copied object will also affect the original object, which can lead to unexpected behavior and bugs, because both objects share the same reference to the same instance of the reference-type member.
              */
             #endregion
+
+            #region Static Members
+            /*
+             *  a) What is a static field, and how is it different from an instance field?
+             *     Answer: Static field is a field that belongs to the class itself not to any instatnce. It is created only once and it is shared among all instances of the class, and it can be accessed using the class name without creating an instance of the class. 
+             *             On the other hand, an instance field is a field that belongs to a specific instance of a class. Each instance of the class has its own copy of the instance field, and it can be accessed only through an instance of the class.
+             *             
+             *  b) What is a static method? Can a static method directly access instance members?
+             *     Answer: A static method is a method that belongs to the class itself, rather than to any specific instance of the class. 
+             *             It can be accessed using the class name without creating an instance of the class.
+             *             
+             *  c) What is a static constructor, and when is it executed?
+             *     Answer: A static constructor is a special constructor that is used to initialize static members of a class. It is executed only once, before the first use of the class. 
+             *     
+             *  d) What is a static class? Can you create an object from a static class?
+             *     Answer: A static class is a class that can only contain static members. Used to group related static members together. 
+             *             A class declared as static cannot create objects from it. It can be accessed using the class name without creating an instance of the class. 
+             */
+            #endregion
             #endregion
 
             #region Practical Questions
