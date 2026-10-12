@@ -59,6 +59,22 @@
              *             A class declared as static cannot create objects from it. It can be accessed using the class name without creating an instance of the class. 
              */
             #endregion
+
+            #region Extension Methods
+            /*
+             *  a) What is an Extension Method?
+             *    Answer: An extension method is a special kind of static method that allows you to add new methods to existing types without modifying the original type or creating a new derived type.
+             *    
+             *  b) What keyword must be used in the first parameter of an extension method?
+             *     Answer: The first parameter of an extension method must use "this" keyword.
+             *     
+             *  c) Where must an extension method be declared?
+             *     Answer: An extension method must be declared in a static class.
+             *     
+             *  d) Can an extension method access private members of the class it extends?
+             *     Answer: No, an extension method cannot access private members of the class it extends. It can only access public and protected members of the class.
+             */
+            #endregion
             #endregion
 
             #region Practical Questions
