@@ -56,6 +56,12 @@ internal abstract class Shipment
 
         TotalShipmentsCreated++;
     }
+
+    static Shipment()
+    {
+        TotalShipmentsCreated = 0;
+        Console.WriteLine("Shipment System initialized.");
+    }
     #endregion
 
 
