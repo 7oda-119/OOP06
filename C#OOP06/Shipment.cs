@@ -6,6 +6,18 @@ internal abstract class Shipment
     string description;
     decimal weight;
     decimal deliveryFee;
+    private static int totalShipmentsCreated;
+    public static int TotalShipmentsCreated 
+    {
+        get
+        {
+            return totalShipmentsCreated;
+        }
+        private set
+        {
+            totalShipmentsCreated = value;
+        }
+    } 
 
     #region Constructors
     //The first constructor receives only trackingCode.
@@ -22,12 +34,13 @@ internal abstract class Shipment
         weight = 1;
         deliveryFee = 50;
         Destination = new DeliveryAddress("New York", "5th Avenue", 100);
+
+        TotalShipmentsCreated++;
     }
 
-    public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination)
+    public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination) : this (trackingCode)
     {
-        if (string.IsNullOrWhiteSpace(trackingCode))
-            throw new ArgumentNullException(nameof(trackingCode), "TrackingCode cannot be null or empty");
+
         if (string.IsNullOrWhiteSpace(description))
             throw new ArgumentNullException(nameof(description), "Description cannot be null or empty");
         if (weight < 0)
@@ -40,6 +53,8 @@ internal abstract class Shipment
         this.weight = weight;
         this.deliveryFee = deliveryFee;
         Destination = destination;
+
+        TotalShipmentsCreated++;
     }
     #endregion
 
