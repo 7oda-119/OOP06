@@ -157,4 +157,11 @@ internal abstract class Shipment
         return copy;
     }
     #endregion
+
+    #region Static method
+    static int GetTotalShipmentsCreated()
+    {
+        return TotalShipmentsCreated;
+    }
+    #endregion
 }
