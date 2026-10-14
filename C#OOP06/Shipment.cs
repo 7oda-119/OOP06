@@ -1,6 +1,6 @@
 ﻿namespace C_OOP06;
 
-internal abstract class Shipment
+internal abstract partial class Shipment : ITrackable
 {
     string trackingCode;
     string description;

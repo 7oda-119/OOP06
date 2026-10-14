@@ -1,11 +1,12 @@
 ﻿namespace C_OOP06;
 
-internal class ExpressShipment : Shipment, ITrackable, IInsurable
+internal class ExpressShipment : Shipment, IInsurable
 {
     decimal extraFee;
     public ExpressShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination, decimal extraFee) : base(trackingCode, description, weight, deliveryFee, destination)  //Added from previous Assignment 
     {
         ExtraFee = extraFee;
+        TrackingStatus = "Out for Delivery";
     }
 
     public decimal ExtraFee
@@ -30,11 +31,6 @@ internal class ExpressShipment : Shipment, ITrackable, IInsurable
         Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
         Console.WriteLine($"EstimatedCost: {EstimatedCost}");
         Console.WriteLine($"ExtraFee: {ExtraFee}");
-    }
-
-    public string GetTrackingStatus()
-    {
-        return $"Shipment {TrackingCode} is Out for Delivery";
     }
 
     public decimal CalculateInsurance()

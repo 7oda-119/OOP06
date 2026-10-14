@@ -1,9 +1,10 @@
 ﻿namespace C_OOP06;
 
-internal class StandardShipment : Shipment, ITrackable, IInsurable
+internal class StandardShipment : Shipment, IInsurable
 {
     public StandardShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination) : base(trackingCode, description, weight, deliveryFee, destination)  //Added from previous Assignment
     {
+        TrackingStatus = "Ready";
     }
 
     public override decimal EstimatedCost => (DeliveryFee + (Weight * 5));
@@ -17,11 +18,6 @@ internal class StandardShipment : Shipment, ITrackable, IInsurable
         Console.WriteLine($"DeliveryFee: {DeliveryFee}");
         Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
         Console.WriteLine($"EstimatedCost: {EstimatedCost}");
-    }
-
-    public string GetTrackingStatus()
-    {
-        return $"Shipment {TrackingCode} is Ready";
     }
 
     public decimal CalculateInsurance()
