@@ -136,6 +136,81 @@
             //deepCopy.Destination.city = "Alexandria";   // Modifying the copy
             //Console.WriteLine(original.Destination.city);   // Output not affected
             #endregion
+
+            #region Main Ckecklist
+            ////  Demonstrate the static constructor running only once, before the first use of the class.
+            //Console.WriteLine("Demonstrate the static constructor");
+            //Shipment standard = new StandardShipment("SH001", "Books", 3, 50, new DeliveryAddress("Cairo", "Tahrir", 10));  // Static constructor will run here
+            //Shipment express = new ExpressShipment("SH002", "Laptop", 2, 80, new DeliveryAddress("Giza", "Pyramids", 20), 25);
+            //Shipment international = new InternationalShipment("SH003", "Phone", 1, 120, new DeliveryAddress("Alexandria", "Sea Road", 30), "UAE", 50);
+
+            //DeliveryUtilities.PrintSeparator();
+
+            //// Call GetTotalShipmentsCreated()
+            //Console.WriteLine("Demonstrate GetTotalShipmentsCreated()");
+            //Console.WriteLine(Shipment.GetTotalShipmentsCreated()); // Output: 3
+
+            //// Create and use DeliveryUtilities
+            //DeliveryUtilities.PrintSeparator();  // => static method from static class
+
+            ////Demonstrate GetSummary() in ShipmentExtensions
+            //Console.WriteLine("Demonstrate GetSummary()");
+            //Console.WriteLine(standard.GetSummary());
+            //Console.WriteLine(express.GetSummary());
+            //Console.WriteLine(international.GetSummary());
+
+            //DeliveryUtilities.PrintSeparator();
+
+            //// Demonstrate IsDelivered() in ShipmentExtensions
+            //Console.WriteLine("Demonstrate IsDelivered()");
+            //Console.WriteLine(standard.IsDelivered());  // Output: False
+            //Console.WriteLine(express.IsDelivered());   // Output: False
+            //Console.WriteLine(international.IsDelivered());  // Output: True
+
+
+            //DeliveryUtilities.PrintSeparator();
+
+            //// Demonstrate the partial method
+            //Console.WriteLine("Demonstrate the partial method");
+            //Console.WriteLine(standard.GetTrackingStatus());     // ==> Ready
+            //standard.UpdateTrackingStatus("Out for delivery");   // Update the tracking status
+            //Console.WriteLine(standard.GetTrackingStatus());     // ==> Out for delivery
+
+            //DeliveryUtilities.PrintSeparator();
+
+
+            #region Make sure all functionality
+            //// Make sure all functionality from Assignment 04 still works.
+            //DeliveryCenter deliveryCenter = new DeliveryCenter();
+
+            //deliveryCenter.AddShipment(standard);
+            //deliveryCenter.AddShipment(express);
+            //deliveryCenter.AddShipment(international);
+
+            //// Print all shipment details.
+            //deliveryCenter.PrintAllShipments();
+
+
+            //DeliveryUtilities.PrintSeparator();
+
+            //// Store the shipment objects in an ITrackable[] array and print their tracking statuses.
+            //ITrackable[] trackableShipments = { standard, express, international };
+            //foreach (ITrackable shipment in trackableShipments)
+            //{
+            //    Console.WriteLine(shipment.GetTrackingStatus());
+            //}
+
+            //DeliveryUtilities.PrintSeparator();
+
+            //// i. Store the shipment objects in an IInsurable[] array and print their insurance values.
+            //IInsurable[] insurablesShipments = { (IInsurable)standard, (IInsurable)express, (IInsurable)international };
+            //foreach (IInsurable shipment in insurablesShipments)
+            //{
+            //    Console.WriteLine($"Insurance cost for shipment {((Shipment)shipment).TrackingCode}: {shipment.CalculateInsurance()}");
+            //}
+            #endregion
+
+            #endregion
             #endregion
             #endregion
         }
