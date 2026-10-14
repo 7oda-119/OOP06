@@ -35,7 +35,6 @@ internal abstract partial class Shipment : ITrackable
         deliveryFee = 50;
         Destination = new DeliveryAddress("New York", "5th Avenue", 100);
 
-        TotalShipmentsCreated++;
     }
 
     public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination) : this (trackingCode)
@@ -159,9 +158,12 @@ internal abstract partial class Shipment : ITrackable
     #endregion
 
     #region Static method
-    static int GetTotalShipmentsCreated()
+    public static int GetTotalShipmentsCreated()
     {
         return TotalShipmentsCreated;
     }
     #endregion
+
+    // Parial method declaration
+    partial void OnTrackingStatusChanged(string newStatus);
 }
