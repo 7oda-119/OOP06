@@ -1,4 +1,6 @@
-﻿namespace C_OOP06
+﻿using System.ComponentModel;
+
+namespace C_OOP06
 {
     internal class Program
     {
@@ -221,6 +223,16 @@
              *   Answer: A generic class is a class that can work with any data type, allowing you to create a single class definition that can be used with different types.
              *           we use generics to create reusable (one class can work with many data types) and type safe code (errors are detected by the compiler), better performance (avoids boxing/unboxing) and cleaner code (reduces code duplication and improves readability).
              */
+            #endregion
+
+            #region Practical
+            Container<int> numberContainer01 = new Container<int>();
+            numberContainer01.AddItem(100);
+            Console.WriteLine(numberContainer01.GetItem());
+
+            Container<string> numberContainer02 = new Container<string>();
+            numberContainer02.AddItem("Ahmed");
+            Console.WriteLine(numberContainer02.GetItem());
             #endregion
             #endregion
         }
