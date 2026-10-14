@@ -213,6 +213,16 @@
             #endregion
             #endregion
             #endregion
+
+            #region C# Advanced
+            #region Theoretical
+            /*
+             *   Q1: What is a generic class? Why use generics?
+             *   Answer: A generic class is a class that can work with any data type, allowing you to create a single class definition that can be used with different types.
+             *           we use generics to create reusable (one class can work with many data types) and type safe code (errors are detected by the compiler), better performance (avoids boxing/unboxing) and cleaner code (reduces code duplication and improves readability).
+             */
+            #endregion
+            #endregion
         }
     }
 }
